@@ -77,25 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Perto de Mim — Comércios locais sem site" },
-      { name: "description", content: "Descubra lojas, restaurantes e serviços perto de você que ainda não têm site na internet." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Perto de Mim — Comércios locais sem site" },
-      { property: "og:description", content: "Descubra lojas, restaurantes e serviços perto de você que ainda não têm site na internet." },
+      { name: "author", content: "Visão Prime Ótica" },
+      { property: "og:site_name", content: "Visão Prime Ótica" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Perto de Mim — Comércios locais sem site" },
-      { name: "twitter:description", content: "Descubra lojas, restaurantes e serviços perto de você que ainda não têm site na internet." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/906efcf0-60d4-420b-8949-39bd2715d652" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/906efcf0-60d4-420b-8949-39bd2715d652" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -106,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
