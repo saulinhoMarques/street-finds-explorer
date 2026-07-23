@@ -28,7 +28,6 @@ import {
   Wrench,
   Monitor,
   Sun as SunIcon,
-  Contact,
   Palette,
   ChevronRight,
 } from "lucide-react";
