@@ -102,7 +102,7 @@ const SERVICES = [
   { icon: Glasses, title: "Lentes de Grau", body: "Antirreflexo, transitions, alta definição e proteção UV." },
   { icon: Sparkles, title: "Lentes Multifocais", body: "Enxergue perto, longe e intermediário com uma única lente." },
   { icon: Monitor, title: "Lentes para Computador", body: "Filtro azul para conforto em longas horas de tela." },
-  { icon: Contact, title: "Lentes de Contato", body: "Diárias, mensais e coloridas com adaptação profissional." },
+  { icon: Heart, title: "Lentes de Contato", body: "Diárias, mensais e coloridas com adaptação profissional." },
   { icon: SunIcon, title: "Óculos de Sol", body: "Modelos originais com proteção UV400 comprovada." },
   { icon: Wrench, title: "Ajuste de Armações", body: "Regulagem gratuita e reparos rápidos no balcão." },
   { icon: Palette, title: "Troca de Lentes", body: "Aproveitamos sua armação favorita com lentes novas." },
