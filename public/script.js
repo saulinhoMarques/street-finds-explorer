@@ -284,9 +284,6 @@ observeReveals();
     title.querySelectorAll(".word").forEach((w, i) => w.style.setProperty("--i", i));
   }
 
-  /* filete dourado nos títulos de seção */
-  document.querySelectorAll(".section-head").forEach((el) => el.classList.add("reveal"));
-
   /* parallax sutil na imagem do hero */
   const media = document.querySelector(".hero-media img");
   if (media) {
