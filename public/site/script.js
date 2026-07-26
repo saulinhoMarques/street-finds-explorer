@@ -2,6 +2,7 @@
 const $ = (s) => document.querySelector(s);
 const money = (n) => n.toLocaleString("pt-BR");
 const PAGE = (location.pathname.split("/").pop() || "index.html");
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---------- cabeçalho e rodapé ---------- */
 const navHtml = (cls) => NAV.map(([h, t]) =>
