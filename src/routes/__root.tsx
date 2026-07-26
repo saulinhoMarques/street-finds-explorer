@@ -81,6 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Visão Prime Ótica" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Visão Prime Ótica — Óculos, Lentes e Exame de Vista" },
+      { property: "og:title", content: "Visão Prime Ótica — Óculos, Lentes e Exame de Vista" },
+      { name: "twitter:title", content: "Visão Prime Ótica — Óculos, Lentes e Exame de Vista" },
+      { name: "description", content: "Armações modernas, lentes de alta tecnologia e atendimento especializado. Agende seu exame de vista na Visão Prime Ótica." },
+      { property: "og:description", content: "Armações modernas, lentes de alta tecnologia e atendimento especializado. Agende seu exame de vista na Visão Prime Ótica." },
+      { name: "twitter:description", content: "Armações modernas, lentes de alta tecnologia e atendimento especializado. Agende seu exame de vista na Visão Prime Ótica." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/84ff7864-8f6c-4af3-bbaf-67312ef4e761" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/84ff7864-8f6c-4af3-bbaf-67312ef4e761" },
     ],
     links: [
       {
