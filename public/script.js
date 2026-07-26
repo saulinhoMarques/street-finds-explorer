@@ -313,3 +313,5 @@ observeReveals();
     setTimeout(() => (location.href = href), 260);
   });
 })();
+
+observeReveals();
