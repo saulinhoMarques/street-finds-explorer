@@ -245,3 +245,71 @@ $("#newsForm").addEventListener("submit", (e) => {
 
 $("#year").textContent = new Date().getFullYear();
 observeReveals();
+
+/* ---------- camada de movimento delicado ---------- */
+(() => {
+  if (REDUCED) return;
+
+  /* barra de progresso de leitura */
+  const bar = document.createElement("div");
+  bar.className = "scroll-progress";
+  document.body.appendChild(bar);
+  const onScroll = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* título principal animado palavra a palavra */
+  const title = document.querySelector(".hero h1.display, .page-hero h1.display");
+  if (title && !title.dataset.split) {
+    title.dataset.split = "1";
+    const walk = (node) => {
+      [...node.childNodes].forEach((n) => {
+        if (n.nodeType === 3 && n.textContent.trim()) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach((w) => {
+            if (!w.trim()) return frag.appendChild(document.createTextNode(w));
+            const s = document.createElement("span");
+            s.className = "word";
+            s.textContent = w;
+            frag.appendChild(s);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    };
+    walk(title);
+    title.querySelectorAll(".word").forEach((w, i) => w.style.setProperty("--i", i));
+  }
+
+  /* filete dourado nos títulos de seção */
+  document.querySelectorAll(".section-head").forEach((el) => el.classList.add("reveal"));
+
+  /* parallax sutil na imagem do hero */
+  const media = document.querySelector(".hero-media img");
+  if (media) {
+    media.setAttribute("data-parallax", "");
+    let raf = 0;
+    addEventListener("scroll", () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const y = Math.min(scrollY, 500);
+        media.style.transform = `translate3d(0,${y * 0.06}px,0) scale(1.02)`;
+      });
+    }, { passive: true });
+  }
+
+  /* transição suave ao navegar entre páginas */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href]");
+    if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey) return;
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel") || href.startsWith("wa.me")) return;
+    e.preventDefault();
+    document.body.classList.add("leaving");
+    setTimeout(() => (location.href = href), 260);
+  });
+})();
