@@ -147,13 +147,14 @@ if ($("#slider")) {
     document.querySelectorAll(".slide").forEach((s, k) => s.classList.toggle("active", k === i));
     document.querySelectorAll("#dots button").forEach((d, k) => d.classList.toggle("active", k === i));
   };
-  let timer = setInterval(() => goTo((slide + 1) % TESTIMONIALS.length), 6000);
+  const autoplay = () => REDUCED ? null : setInterval(() => goTo((slide + 1) % TESTIMONIALS.length), 6000);
+  let timer = autoplay();
   $("#dots").addEventListener("click", (e) => {
     const b = e.target.closest("[data-i]");
     if (!b) return;
     clearInterval(timer);
     goTo(Number(b.dataset.i));
-    timer = setInterval(() => goTo((slide + 1) % TESTIMONIALS.length), 6000);
+    timer = autoplay();
   });
 }
 
@@ -216,7 +217,7 @@ $("#menuBtn").addEventListener("click", () => $("#mobileMenu").classList.toggle(
 $("#mobileMenu").addEventListener("click", (e) => {
   if (e.target.tagName === "A") $("#mobileMenu").classList.remove("open");
 });
-$("#topBtn").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+$("#topBtn").addEventListener("click", () => window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" }));
 
 const themeBtn = $("#themeBtn");
 function applyTheme(dark) {
