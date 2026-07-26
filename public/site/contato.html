@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contato e Agendamento — Visão Prime Ótica</title>
+<meta name="description" content="Agende seu exame de vista, fale por WhatsApp ou visite nossa loja nos Jardins, São Paulo." />
+<meta property="og:title" content="Contato e Agendamento — Visão Prime Ótica" />
+<meta property="og:description" content="Agende seu exame de vista, fale por WhatsApp ou visite nossa loja nos Jardins, São Paulo." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<section class="page-hero">
+  <div class="container"><span class="eyebrow">Contato</span><h1 class="display">Fale com a gente pelo canal que preferir.</h1></div>
+</section>
+
+<section id="agendamento" class="container section-sm two-col">
+  <div class="reveal">
+    <span class="eyebrow">Agendamento</span>
+    <h2 class="display">Reserve seu horário em menos de 1 minuto.</h2>
+    <p class="muted" style="margin-top:16px">Preencha o formulário e nossa equipe entra em contato para confirmar. Também atendemos por WhatsApp para agendamentos expressos.</p>
+    <div class="info-list">
+      <div><strong>Rua das Óticas, 1234 · Jardins</strong><small>São Paulo · SP · 01234-567</small></div>
+      <div><strong>Seg a Sex 9h–19h · Sáb 9h–14h</strong><small>Domingos e feriados fechado</small></div>
+    </div>
+  </div>
+  <form class="card form reveal" id="bookingForm">
+    <div class="form-grid">
+      <label>Nome<input name="nome" required /></label>
+      <label>Telefone<input name="telefone" required /></label>
+      <label>WhatsApp<input name="whatsapp" /></label>
+      <label>E-mail<input type="email" name="email" required /></label>
+      <label>Data<input type="date" name="data" required /></label>
+      <label>Horário<input type="time" name="horario" required /></label>
+    </div>
+    <label>Tipo de atendimento
+      <select name="tipo" required>
+        <option>Exame de vista</option><option>Escolha de armação</option><option>Troca de lentes</option>
+        <option>Ajuste / manutenção</option><option>Lentes de contato</option>
+      </select>
+    </label>
+    <label>Mensagem<textarea name="mensagem" rows="3" placeholder="Alguma observação ou preferência?"></textarea></label>
+    <button class="btn btn-primary btn-lg" type="submit" id="submitBtn">Agendar</button>
+  </form>
+</section>
+
+<section class="container section-sm"><div class="grid-5" id="contacts"></div></section>
+
+<section class="tinted section">
+  <div class="container">
+    <div class="reveal head"><span class="eyebrow">Localização</span><h2 class="display">Visite nossa loja no coração dos Jardins.</h2></div>
+    <div class="map-grid">
+      <div class="card map">
+        <iframe title="Mapa Visão Prime" src="https://www.google.com/maps?q=Jardins,+S%C3%A3o+Paulo,+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="card map-info">
+        <div><small>Endereço</small><p>Rua das Óticas, 1234 · Jardins · SP</p></div>
+        <div><small>Telefone</small><p>(11) 4002-8922</p></div>
+        <div><small>Horário</small><p>Seg a Sex 9h–19h<br />Sáb 9h–14h</p></div>
+        <a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Jardins+S%C3%A3o+Paulo">Abrir no Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

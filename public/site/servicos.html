@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Serviços — Exame de Vista e Lentes | Visão Prime Ótica</title>
+<meta name="description" content="Exame de vista, lentes multifocais, lentes de contato, ajustes e troca de lentes com especialistas." />
+<meta property="og:title" content="Serviços — Exame de Vista e Lentes | Visão Prime Ótica" />
+<meta property="og:description" content="Exame de vista, lentes multifocais, lentes de contato, ajustes e troca de lentes com especialistas." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<section class="page-hero">
+  <div class="container"><span class="eyebrow">Nossos serviços</span><h1 class="display">Tudo o que sua visão precisa, em um só lugar.</h1></div>
+</section>
+
+<section id="servicos" class="container section-sm"><div class="grid-4" id="services"></div></section>
+
+<section class="tinted section">
+  <div class="container">
+    <div class="reveal head"><span class="eyebrow">Como funciona</span><h2 class="display">Quatro passos para uma visão perfeita.</h2></div>
+    <div class="grid-4" id="steps"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col align-center">
+    <div class="reveal">
+      <span class="eyebrow">Antes e depois</span>
+      <h2 class="display">A diferença que a armação certa faz.</h2>
+      <p class="muted" style="margin-top:16px">Arraste o controle para ver a transformação. Nossa consultoria de estilo ajuda você a encontrar o modelo que valoriza o seu rosto.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="contato.html#agendamento">Agendar consultoria</a></div>
+    </div>
+    <div class="ba reveal">
+      <img class="ba-after" src="img/after.jpg" alt="Depois" />
+      <div class="ba-clip" id="baClip"><img src="img/before.jpg" alt="Antes" /></div>
+      <div class="ba-line" id="baLine"><span>↔</span></div>
+      <input id="baRange" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois" />
+      <span class="tag left">Antes</span>
+      <span class="tag right">Depois</span>
+    </div>
+  </div>
+</section>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
