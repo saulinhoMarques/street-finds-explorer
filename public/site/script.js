@@ -91,6 +91,16 @@ const CONTACTS = [
 const $ = (s) => document.querySelector(s);
 const money = (n) => n.toLocaleString("pt-BR");
 
+/* animações ao rolar */
+const revealIO = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+function observeReveals() {
+  document.querySelectorAll(".reveal:not(.in)").forEach((el) => revealIO.observe(el));
+}
+
 /* ---------- render ---------- */
 $("#benefits").innerHTML = BENEFITS.map(([i, t, b]) =>
   `<div class="reveal"><div class="ico">${i}</div><h3>${t}</h3><p>${b}</p></div>`).join("");
@@ -254,15 +264,6 @@ $("#newsForm").addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-/* animações ao rolar */
-const revealIO = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
-  });
-}, { threshold: 0.12, rootMargin: "0px 0px -40px" });
-function observeReveals() {
-  document.querySelectorAll(".reveal:not(.in)").forEach((el) => revealIO.observe(el));
-}
-observeReveals();
-
 $("#year").textContent = new Date().getFullYear();
+
+observeReveals();
