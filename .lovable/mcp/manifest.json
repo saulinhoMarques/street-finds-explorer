@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "visao-prime-otica",
+      "version": "0.1.0",
+      "title": "Visão Prime Ótica"
+    },
+    "tools": [
+      {
+        "name": "search_products",
+        "title": "Buscar armações",
+        "description": "Busca armações e óculos do catálogo da Visão Prime Ótica por texto, categoria, marca e faixa de preço.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Texto livre (nome ou marca)."
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "Masculino",
+                "Feminino",
+                "Infantil",
+                "Esportivo",
+                "Premium"
+              ],
+              "description": "Categoria do produto."
+            },
+            "brand": {
+              "type": "string",
+              "description": "Marca, ex.: Ray-Ban."
+            },
+            "maxPrice": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Preço máximo em reais."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "description": "Máximo de resultados (padrão 12)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_services",
+        "title": "Listar serviços",
+        "description": "Lista os serviços ópticos oferecidos pela Visão Prime Ótica e as marcas trabalhadas.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "answer_faq",
+        "title": "Perguntas frequentes",
+        "description": "Retorna as perguntas frequentes da Visão Prime Ótica (garantia, prazos, convênios, parcelamento). Filtra por termo se informado.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "Termo ou pergunta para filtrar o FAQ."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "store_info",
+        "title": "Informações da loja",
+        "description": "Endereço, horário de funcionamento e canais de contato públicos da Visão Prime Ótica.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
