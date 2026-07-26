@@ -164,6 +164,7 @@ if ($("#stats")) {
 
   const countUp = (el) => {
     const target = Number(el.dataset.count), dur = 1400, start = performance.now();
+    if (REDUCED) { el.textContent = target.toLocaleString("pt-BR"); return; }
     const tick = (now) => {
       const p = Math.min(1, (now - start) / dur);
       el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString("pt-BR");
