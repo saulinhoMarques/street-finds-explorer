@@ -248,3 +248,69 @@ footer .muted{margin-top:14px;font-size:.9rem}
 .page-hero h1.display{font-size:clamp(2rem,4vw,3rem);max-width:20ch}
 .nav-links a.active{color:var(--accent)}
 .mobile-menu a.active{color:var(--accent)}
+
+/* ===== transições e animações ===== */
+@keyframes vp-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes vp-fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes vp-pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes vp-pulse-ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}70%{box-shadow:0 0 0 14px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* entrada da página */
+.page-hero>.container,.hero-grid>div:first-child{animation:vp-fade-up .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-grid>div:first-child{animation-delay:.05s}
+
+/* stagger dos blocos revelados */
+.grid-3>.reveal:nth-child(2),.grid-4>.reveal:nth-child(2),.benefits>.reveal:nth-child(2){transition-delay:.08s}
+.grid-3>.reveal:nth-child(3),.grid-4>.reveal:nth-child(3),.benefits>.reveal:nth-child(3){transition-delay:.16s}
+.grid-4>.reveal:nth-child(4),.benefits>.reveal:nth-child(4){transition-delay:.24s}
+.grid-3>.reveal:nth-child(n+4),.grid-4>.reveal:nth-child(n+5){transition-delay:.3s}
+
+/* elementos flutuantes do hero */
+.float-card{animation:vp-float 6s ease-in-out infinite}
+.float-card.fc-2{animation-delay:1.2s}
+.float-card.fc-3{animation-delay:2.4s}
+
+/* micro-interações */
+.btn{transition:transform .2s cubic-bezier(.2,.7,.2,1),background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.icon-btn{transition:transform .25s,background-color .2s,border-color .2s}
+.icon-btn:hover{transform:rotate(-12deg) scale(1.06)}
+.logo-mark{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.logo:hover .logo-mark{transform:rotate(180deg)}
+.ico{transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s}
+.card.hover:hover .ico,.contact-card:hover .ico{transform:translateY(-3px) scale(1.08)}
+.card.hover:hover,.contact-card:hover,.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.product:hover .thumb img,.post:hover .cover img{transform:scale(1.06)}
+.post{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.post:hover{transform:translateY(-5px)}
+.fav{transition:transform .2s cubic-bezier(.2,.7,.2,1),color .2s,background-color .2s}
+.fav:hover{transform:scale(1.15)}
+.fav.on{animation:vp-pop .3s ease both}
+.chip:hover{transform:translateY(-1px)}
+.brands span:hover{opacity:1;transform:translateY(-2px)}
+.nav-links a{position:relative;transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
+.faq-q span{transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .25s}
+.faq-item.open .faq-q span{transform:rotate(135deg)}
+.fab{transition:transform .25s cubic-bezier(.2,.7,.2,1),opacity .25s,box-shadow .25s}
+.fab:hover{transform:translateY(-3px) scale(1.06)}
+.fab.wa{animation:vp-pulse-ring 3.2s ease-out infinite}
+.news button,.contact-card,.brands span,.chip{will-change:transform}
+
+/* menu mobile suave */
+.mobile-menu{display:flex;max-height:0;overflow:hidden;opacity:0;padding-top:0;padding-bottom:0;border-top-color:transparent;transition:max-height .35s cubic-bezier(.2,.7,.2,1),opacity .25s ease,padding .3s ease}
+.mobile-menu.open{max-height:420px;opacity:1;padding-top:16px;padding-bottom:22px;border-top-color:var(--border)}
+@media(min-width:1024px){.mobile-menu,.mobile-menu.open{display:none}}
+
+/* foco visível acessível */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* respeita prefers-reduced-motion */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .btn:hover,.icon-btn:hover,.card.hover:hover,.contact-card:hover,.product:hover,.post:hover,.fab:hover,.fav:hover,.chip:hover,.brands span:hover,.logo:hover .logo-mark,.product:hover .thumb img,.post:hover .cover img{transform:none!important}
+}
