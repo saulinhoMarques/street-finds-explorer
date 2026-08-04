@@ -1,20 +1,20 @@
 /* ===== Visão Prime Ótica — dados compartilhados ===== */
 const BENEFITS = [
   ["◎", "Armações Originais", "Marcas premium com nota fiscal e garantia de autenticidade."],
-  ["👁", "Exame de Vista", "Avaliação completa com oftalmologistas parceiros credenciados."],
+  ["◉", "Exame de Vista", "Avaliação completa com oftalmologistas parceiros credenciados."],
   ["✓", "Garantia nas Lentes", "12 meses de garantia contra defeitos de fabricação."],
-  ["🚚", "Entrega Rápida", "Seus óculos prontos em até 5 dias úteis, retirada ou delivery."],
+  ["➤", "Entrega Rápida", "Seus óculos prontos em até 5 dias úteis, retirada ou delivery."],
 ];
 
 const SERVICES = [
-  ["👁", "Exame de Vista", "Avaliação completa da sua acuidade visual em ambiente equipado."],
+  ["◉", "Exame de Vista", "Avaliação completa da sua acuidade visual em ambiente equipado."],
   ["◎", "Lentes de Grau", "Antirreflexo, transitions, alta definição e proteção UV."],
   ["✧", "Lentes Multifocais", "Enxergue perto, longe e intermediário com uma única lente."],
-  ["🖥", "Lentes para Computador", "Filtro azul para conforto em longas horas de tela."],
+  ["▭", "Lentes para Computador", "Filtro azul para conforto em longas horas de tela."],
   ["♡", "Lentes de Contato", "Diárias, mensais e coloridas com adaptação profissional."],
   ["☀", "Óculos de Sol", "Modelos originais com proteção UV400 comprovada."],
-  ["🔧", "Ajuste de Armações", "Regulagem gratuita e reparos rápidos no balcão."],
-  ["🎨", "Troca de Lentes", "Aproveitamos sua armação favorita com lentes novas."],
+  ["✧", "Ajuste de Armações", "Regulagem gratuita e reparos rápidos no balcão."],
+  ["◈", "Troca de Lentes", "Aproveitamos sua armação favorita com lentes novas."],
 ];
 
 const CATEGORIES = ["Todos", "Masculino", "Feminino", "Infantil", "Esportivo", "Premium"];
@@ -46,8 +46,8 @@ const STEPS = [
 const DIFFERENTIALS = [
   ["✧", "Tecnologia nas lentes"], ["🏅", "Especialistas certificados"],
   ["💳", "Parcelamento facilitado"], ["👥", "Atendimento humanizado"],
-  ["🛡", "Garantia estendida"], ["◎", "Produtos originais"],
-  ["🔧", "Ajustes gratuitos"], ["🚚", "Entrega rápida"],
+  ["✦", "Garantia estendida"], ["◎", "Produtos originais"],
+  ["✧", "Ajustes gratuitos"], ["➤", "Entrega rápida"],
 ];
 
 const TESTIMONIALS = [
