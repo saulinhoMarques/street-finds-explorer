@@ -284,9 +284,27 @@ observeReveals();
     title.querySelectorAll(".word").forEach((w, i) => w.style.setProperty("--i", i));
   }
 
+  /* efeito de mouse parallax no hero e botões */
+  if (!REDUCED) {
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth) - 0.5;
+      const y = (e.clientY / window.innerHeight) - 0.5;
+      const buttons = document.querySelectorAll(".btn[data-sheen]");
+      buttons.forEach(btn => {
+        const rect = btn.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / 100;
+        const dy = (e.clientY - cy) / 100;
+        btn.style.setProperty("--light-x", `${cx + dx}px`);
+        btn.style.setProperty("--light-y", `${cy + dy}px`);
+      });
+    }, { passive: true });
+  }
+
   /* parallax sutil na imagem do hero */
   const media = document.querySelector(".hero-media img");
-  if (media) {
+  if (media && !REDUCED) {
     media.setAttribute("data-parallax", "");
     let raf = 0;
     addEventListener("scroll", () => {
@@ -299,6 +317,22 @@ observeReveals();
     }, { passive: true });
   }
 
+  /* efeito de scroll suave em cards filtrando */
+  const produtosGrade = document.querySelector(".products-grid");
+  if (produtosGrade && !REDUCED) {
+    let tmo;
+    const obs = new IntersectionObserver((ents) => {
+      ents.forEach(e => {
+        if (e.isIntersecting && !e.target.hasAttribute("data-vis")) {
+          e.target.setAttribute("data-vis", "");
+          const idx = Array.from(e.target.parentChildren).indexOf(e.target);
+          e.target.style.animation = `vp-fade-in .5s ease ${idx * 0.08}s both`;
+        }
+      });
+    }, { threshold: 0.1 });
+    produtosGrade.querySelectorAll(".product").forEach(p => obs.observe(p));
+  }
+
   /* transição suave ao navegar entre páginas */
   document.addEventListener("click", (e) => {
     const a = e.target.closest("a[href]");
@@ -309,6 +343,6 @@ observeReveals();
     document.body.classList.add("leaving");
     setTimeout(() => (location.href = href), 260);
   });
-})();
+})()
 
 observeReveals();
