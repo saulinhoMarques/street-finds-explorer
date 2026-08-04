@@ -67,16 +67,17 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop
 
 /* hero */
 .hero{position:relative;padding:130px 0 80px;overflow:hidden;background:linear-gradient(140deg,color-mix(in srgb,var(--secondary) 70%,transparent),var(--bg))}
-.hero-grid{display:grid;gap:48px;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(217,164,65,.08),transparent 50%),radial-gradient(circle at 20% 80%,rgba(30,42,74,.06),transparent 50%);pointer-events:none}
+.hero-grid{display:grid;gap:48px;align-items:center;position:relative;z-index:1}
 @media(min-width:1024px){.hero-grid{grid-template-columns:1fr 1fr}}
-.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:999px;padding:6px 14px;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:999px;padding:6px 14px;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);animation:vp-fade-in .8s ease .1s both}
 .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:36px;font-size:.88rem;color:var(--muted)}
-.stars{color:var(--accent)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:36px;font-size:.88rem;color:var(--muted);animation:vp-fade-in .8s ease .3s both}
+.stars{color:var(--accent);font-weight:700}
 .hero-media{position:relative}
-.hero-media img{border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);height:520px;object-fit:cover;width:100%}
-.float-card{position:absolute;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:10px 14px;font-size:.75rem;font-weight:700;box-shadow:var(--shadow)}
-.fc-1{left:-14px;top:32px}.fc-2{right:-14px;top:50%}.fc-3{left:32px;bottom:-16px}
+.hero-media img{border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow),var(--glow-primary);height:520px;object-fit:cover;width:100%;animation:vp-float .6s ease-out}
+.float-card{position:absolute;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:10px 14px;font-size:.75rem;font-weight:700;box-shadow:var(--shadow);animation:vp-bounce-in .7s cubic-bezier(.16,1,.3,1) both}
+.fc-1{left:-14px;top:32px;animation-delay:.2s}.fc-2{right:-14px;top:50%;animation-delay:.4s}.fc-3{left:32px;bottom:-16px;animation-delay:.6s}
 
 /* generic grids/cards */
 .grid-3,.grid-4,.grid-5{display:grid;gap:22px;grid-template-columns:1fr}
