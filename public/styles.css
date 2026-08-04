@@ -368,9 +368,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .reveal{opacity:0;transform:translateY(22px);filter:blur(6px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s ease}
 .reveal.in{opacity:1;transform:none;filter:blur(0)}
 
-/* entrada/saída de página */
-body{animation:vp-page-in .55s cubic-bezier(.16,1,.3,1) both}
-body.leaving{opacity:0;transform:translateY(-6px);transition:opacity .28s ease,transform .28s ease}
+/* entrada/saída de página já definida nos keyframes acima */
 
 /* barra de progresso de leitura */
 .scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 40%,transparent));z-index:60;pointer-events:none}
