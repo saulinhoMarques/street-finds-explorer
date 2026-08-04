@@ -325,7 +325,7 @@ observeReveals();
       ents.forEach(e => {
         if (e.isIntersecting && !e.target.hasAttribute("data-vis")) {
           e.target.setAttribute("data-vis", "");
-          const idx = Array.from(e.target.parentChildren).indexOf(e.target);
+          const idx = Array.from(e.target.parentElement.children).indexOf(e.target);
           e.target.style.animation = `vp-fade-in .5s ease ${idx * 0.08}s both`;
         }
       });
