@@ -10,11 +10,11 @@ const SERVICES = [
   ["◉", "Exame de Vista", "Avaliação completa da sua acuidade visual em ambiente equipado."],
   ["◎", "Lentes de Grau", "Antirreflexo, transitions, alta definição e proteção UV."],
   ["✧", "Lentes Multifocais", "Enxergue perto, longe e intermediário com uma única lente."],
-  ["🖥", "Lentes para Computador", "Filtro azul para conforto em longas horas de tela."],
+  ["▭", "Lentes para Computador", "Filtro azul para conforto em longas horas de tela."],
   ["♡", "Lentes de Contato", "Diárias, mensais e coloridas com adaptação profissional."],
   ["☀", "Óculos de Sol", "Modelos originais com proteção UV400 comprovada."],
   ["✧", "Ajuste de Armações", "Regulagem gratuita e reparos rápidos no balcão."],
-  ["🎨", "Troca de Lentes", "Aproveitamos sua armação favorita com lentes novas."],
+  ["◈", "Troca de Lentes", "Aproveitamos sua armação favorita com lentes novas."],
 ];
 
 const CATEGORIES = ["Todos", "Masculino", "Feminino", "Infantil", "Esportivo", "Premium"];
