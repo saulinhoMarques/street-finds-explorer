@@ -83,12 +83,13 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop
 .grid-3,.grid-4,.grid-5{display:grid;gap:22px;grid-template-columns:1fr}
 @media(min-width:640px){.grid-3,.grid-4,.grid-5{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-5{grid-template-columns:repeat(5,1fr)}}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
-.card.hover:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
-.card.hover{transition:.25s}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:-1px;background:linear-gradient(135deg,rgba(217,164,65,.12),transparent);opacity:0;pointer-events:none;border-radius:var(--radius);transition:opacity .4s}
+.card.hover:hover{transform:translateY(-8px);box-shadow:var(--shadow),var(--glow-primary);border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
+.card.hover:hover::before{opacity:1}
 .card h3{font-family:"Fraunces",serif;font-size:1.1rem;margin-top:14px}
 .card p{font-size:.9rem;color:var(--muted);margin-top:8px}
-.ico{display:grid;place-items:center;height:44px;width:44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 22%,transparent);font-size:1.2rem}
+.ico{display:grid;place-items:center;height:44px;width:44px;border-radius:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 22%,transparent),color-mix(in srgb,var(--accent) 8%,transparent));font-size:1.2rem;transition:all .3s cubic-bezier(.16,1,.3,1)}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
