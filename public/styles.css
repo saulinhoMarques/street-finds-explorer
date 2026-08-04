@@ -247,6 +247,8 @@ html.dark .quotes{color:var(--primary-fg)}
 /* footer */
 footer{border-top:2px solid color-mix(in srgb,var(--accent) 20%,var(--border));background:linear-gradient(135deg,var(--card),color-mix(in srgb,var(--accent) 2%,var(--card)));padding:64px 0 28px;position:relative;overflow:hidden}
 footer::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(217,164,65,.03),transparent);pointer-events:none}
+.footer-grid{display:grid;gap:36px;position:relative;z-index:1}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
 footer .ft{font-family:"Fraunces",serif;font-weight:600}
 footer ul{list-style:none;margin-top:14px;display:grid;gap:8px;font-size:.9rem;color:var(--muted)}
 footer ul a{transition:.2s}
