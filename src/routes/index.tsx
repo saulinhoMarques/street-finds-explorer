@@ -1213,18 +1213,6 @@ import {
   Smartphone,
   MessageSquare
 } from "lucide-react";
-import { 
-  CheckCircle2, 
-  Calendar, 
-  Users, 
-  BarChart3, 
-  Globe, 
-  Zap, 
-  ArrowRight,
-  ShieldCheck,
-  Smartphone,
-  MessageSquare
-} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
