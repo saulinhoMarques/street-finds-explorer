@@ -1,5 +1,13 @@
+/*
+Execute esta instrucao no projeto: # PROMPT MESTRE — V1 DO SAAS PARA PEQUENOS NEGÓCIOS
+
+Crie uma aplicação web SaaS profissional, moderna, responsiva e escalável chamada NexaFlow.
+
+## 1. OBJETIVO DO PRODUTO
+... (rest of the prompt)
+*/
+
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
 import { 
   CheckCircle2, 
   Calendar, 
