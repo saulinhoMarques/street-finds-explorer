@@ -65,7 +65,7 @@ function RelatoriosPage() {
                   <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fontWeight: 600 }} />
                   <Tooltip contentStyle={{ borderRadius: "12px", border: "none", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} />
                   <Line type="monotone" dataKey="total" stroke="oklch(0.25 0.08 255)" strokeWidth={3} dot={{ r: 4, fill: "oklch(0.25 0.08 255)", strokeWidth: 2 }} />
-                </BarChart>
+                </LineChart>
               </ResponsiveContainer>
             </div>
           </CardContent>
