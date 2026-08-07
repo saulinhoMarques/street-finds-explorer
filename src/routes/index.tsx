@@ -1,3 +1,1204 @@
+/*
+Execute esta instrucao no projeto: # PROMPT MESTRE — V1 DO SAAS PARA PEQUENOS NEGÓCIOS
+
+Crie uma aplicação web SaaS profissional, moderna, responsiva e escalável chamada **NexaFlow**.
+
+## 1. OBJETIVO DO PRODUTO
+
+O NexaFlow será uma plataforma SaaS destinada a pequenos negócios de serviços.
+
+A plataforma deve permitir que cada empresa tenha seu próprio ambiente dentro do sistema para administrar:
+
+* Clientes
+* Serviços
+* Profissionais
+* Agendamentos
+* Horários
+* Dashboard
+* Relatórios
+* Configurações
+* Presença digital
+
+O produto deve ser desenvolvido pensando desde o início em uma arquitetura **multi-tenant**, onde várias empresas utilizam a mesma aplicação, mas cada empresa só consegue visualizar e administrar seus próprios dados.
+
+IMPORTANTE:
+
+Nesta primeira versão, priorize a **interface, experiência do usuário, navegação e estrutura visual**.
+
+Não implemente pagamentos, automações complexas ou integrações externas ainda.
+
+Utilize dados fictícios/mockados para demonstrar o funcionamento da interface.
+
+---
+
+# 2. IDENTIDADE VISUAL
+
+Nome:
+
+**NexaFlow**
+
+Conceito:
+
+Uma plataforma moderna, confiável e tecnológica para ajudar pequenos negócios a organizar sua operação e receber agendamentos.
+
+Estilo visual:
+
+* SaaS moderno
+* Profissional
+* Minimalista
+* Premium
+* Tecnológico
+* Limpo
+* Fácil de usar
+* Visual semelhante a produtos SaaS modernos
+
+Evite aparência genérica de template.
+
+A interface deve parecer um produto comercial real.
+
+### Paleta
+
+Utilize uma identidade visual baseada em:
+
+* Azul profundo como cor principal
+* Azul/roxo para detalhes e gradientes sutis
+* Branco para áreas principais
+* Cinza muito claro para backgrounds
+* Cinza escuro para textos
+* Verde para estados positivos
+* Vermelho para erros
+* Amarelo/laranja para alertas
+
+Não exagerar nos gradientes.
+
+A interface deve continuar profissional mesmo sem eles.
+
+---
+
+# 3. TECNOLOGIA
+
+Utilize:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Componentes reutilizáveis
+* Lucide Icons
+
+Organize o projeto de forma limpa e escalável.
+
+Não criar um único arquivo gigante.
+
+Separar componentes, páginas, layouts e dados mockados.
+
+Preparar a estrutura para futura integração com:
+
+* Supabase
+* PostgreSQL
+* Supabase Auth
+* Storage
+* Sistema de assinaturas
+
+Nesta etapa NÃO conectar ao Supabase.
+
+---
+
+# 4. ESTRUTURA PRINCIPAL
+
+Criar as seguintes áreas:
+
+## Área pública
+
+* Landing Page
+* Página de preços
+* Página de demonstração
+
+## Área autenticada
+
+* Dashboard
+* Agenda
+* Clientes
+* Serviços
+* Profissionais
+* Relatórios
+* Configurações
+
+## Autenticação
+
+* Login
+* Cadastro
+* Recuperação de senha
+* Onboarding
+
+---
+
+# 5. LANDING PAGE
+
+Criar uma Landing Page extremamente profissional.
+
+## Header
+
+Logo:
+
+**NexaFlow**
+
+Menu:
+
+* Recursos
+* Como funciona
+* Planos
+* FAQ
+
+Botões:
+
+**Entrar**
+
+**Começar agora**
+
+O header deve permanecer agradável no celular.
+
+---
+
+# 6. HERO
+
+Título principal:
+
+**Seu negócio organizado. Seus clientes mais próximos.**
+
+Subtítulo:
+
+"Uma plataforma completa para pequenos negócios gerenciarem clientes, serviços, profissionais e agendamentos em um só lugar."
+
+Botões:
+
+**Começar agora**
+
+**Ver demonstração**
+
+Adicionar uma representação visual do dashboard ao lado ou abaixo do texto.
+
+A seção deve causar uma primeira impressão forte.
+
+---
+
+# 7. SEÇÃO DE BENEFÍCIOS
+
+Criar cards para:
+
+### Gestão simples
+
+Organize clientes, serviços e profissionais em um único lugar.
+
+### Agendamentos
+
+Tenha controle completo da sua agenda.
+
+### Presença digital
+
+Tenha uma página profissional para apresentar seu negócio.
+
+### Dados do negócio
+
+Acompanhe indicadores importantes através do dashboard.
+
+---
+
+# 8. SEÇÃO "COMO FUNCIONA"
+
+Criar três etapas:
+
+### 01 — Cadastre seu negócio
+
+Configure sua empresa, serviços e profissionais.
+
+### 02 — Organize sua operação
+
+Gerencie clientes e agendamentos pelo painel.
+
+### 03 — Cresça
+
+Use seus dados e sua presença digital para melhorar o negócio.
+
+---
+
+# 9. SEÇÃO DE RECURSOS
+
+Criar uma seção visual mostrando:
+
+* Dashboard
+* Agenda
+* Clientes
+* Serviços
+* Profissionais
+* Relatórios
+
+Cada recurso deve ter:
+
+* Ícone
+* Título
+* Descrição
+* Pequena representação visual
+
+---
+
+# 10. PLANOS
+
+Criar três planos.
+
+## ESSENCIAL
+
+**R$ 59/mês**
+
+Inclui:
+
+* Página profissional
+* Hospedagem
+* SSL
+* Suporte
+* Atualizações
+
+Botão:
+
+**Começar agora**
+
+---
+
+## PROFISSIONAL
+
+**R$ 99/mês**
+
+Marcar como:
+
+**Mais popular**
+
+Inclui:
+
+* Tudo do Essencial
+* Agenda online
+* Clientes
+* Serviços
+* Dashboard
+* Profissionais
+
+Botão:
+
+**Começar agora**
+
+---
+
+## PREMIUM
+
+**R$ 199/mês**
+
+Inclui:
+
+* Tudo do Profissional
+* Múltiplos profissionais
+* Relatórios avançados
+* Recursos avançados
+* Personalizações
+
+Botão:
+
+**Começar agora**
+
+Os preços são apenas valores iniciais de demonstração e devem ser facilmente alteráveis posteriormente.
+
+---
+
+# 11. FAQ
+
+Criar perguntas:
+
+### Preciso instalar algum programa?
+
+Não. O NexaFlow funciona diretamente pelo navegador.
+
+### Posso acessar pelo celular?
+
+Sim. A plataforma deve ser totalmente responsiva.
+
+### Posso cadastrar vários funcionários?
+
+Sim, dependendo do plano contratado.
+
+### Meus dados ficam separados de outras empresas?
+
+Sim. A arquitetura será preparada para isolamento de dados por empresa.
+
+### Posso cancelar?
+
+O sistema deverá permitir gerenciamento de assinatura futuramente.
+
+---
+
+# 12. FOOTER
+
+Criar footer profissional contendo:
+
+NexaFlow
+
+"Gestão simples para negócios que querem crescer."
+
+Links:
+
+* Recursos
+* Planos
+* FAQ
+* Termos
+* Privacidade
+* Contato
+
+Adicionar copyright:
+
+© 2026 NexaFlow. Todos os direitos reservados.
+
+---
+
+# 13. LOGIN
+
+Criar página de login moderna.
+
+Layout dividido em duas partes no desktop.
+
+Esquerda:
+
+Mensagem de marketing:
+
+**Bem-vindo de volta.**
+
+"Continue gerenciando seu negócio de forma simples e inteligente."
+
+Direita:
+
+Card de login.
+
+Campos:
+
+* E-mail
+* Senha
+
+Botão:
+
+**Entrar**
+
+Links:
+
+* Esqueci minha senha
+* Criar conta
+
+Adicionar opção:
+
+**Continuar com Google**
+
+Mas deixar a integração apenas visual nesta etapa.
+
+---
+
+# 14. CADASTRO
+
+Criar página:
+
+**Crie sua conta**
+
+Campos:
+
+* Nome
+* E-mail
+* Senha
+* Confirmar senha
+
+Checkbox:
+
+"Concordo com os termos de uso e política de privacidade."
+
+Botão:
+
+**Criar conta**
+
+Após o cadastro, direcionar visualmente para o onboarding.
+
+---
+
+# 15. ONBOARDING
+
+Criar um fluxo de configuração inicial.
+
+Etapa 1:
+
+**Sobre seu negócio**
+
+Campos:
+
+* Nome da empresa
+* Segmento
+* Telefone
+* WhatsApp
+
+Etapa 2:
+
+**Localização**
+
+Campos:
+
+* CEP
+* Endereço
+* Número
+* Cidade
+* Estado
+
+Etapa 3:
+
+**Horários**
+
+Permitir configurar:
+
+* Segunda
+* Terça
+* Quarta
+* Quinta
+* Sexta
+* Sábado
+* Domingo
+
+Etapa 4:
+
+**Pronto!**
+
+Mensagem:
+
+**Seu espaço está pronto para começar.**
+
+Botão:
+
+**Ir para o dashboard**
+
+Criar indicador visual de progresso.
+
+---
+
+# 16. DASHBOARD
+
+Criar o painel principal.
+
+Layout:
+
+Sidebar fixa no desktop.
+
+No celular, utilizar menu lateral retrátil.
+
+Sidebar:
+
+Logo NexaFlow
+
+Menu:
+
+Dashboard
+Agenda
+Clientes
+Serviços
+Profissionais
+Relatórios
+
+Separador
+
+Configurações
+
+Ajuda
+
+No final:
+
+Avatar do usuário
+
+Nome:
+
+"Administrador"
+
+Empresa:
+
+"Barbearia Imperial"
+
+---
+
+# 17. HEADER DO DASHBOARD
+
+Mostrar:
+
+"Bom dia, João 👋"
+
+"Veja o que está acontecendo no seu negócio hoje."
+
+No lado direito:
+
+* Busca
+* Notificações
+* Avatar
+
+---
+
+# 18. CARDS DO DASHBOARD
+
+Criar quatro cards:
+
+### Agendamentos hoje
+
+12
+
+### Clientes
+
+148
+
+### Serviços
+
+8
+
+### Faturamento estimado
+
+R$ 2.840
+
+Utilizar pequenos indicadores de crescimento.
+
+Exemplo:
+
++12% este mês
+
+---
+
+# 19. GRÁFICO
+
+Criar gráfico de agendamentos.
+
+Filtros:
+
+* 7 dias
+* 30 dias
+* 3 meses
+
+Mostrar visualmente a quantidade de agendamentos.
+
+Utilizar Chart.js ou uma biblioteca compatível.
+
+---
+
+# 20. PRÓXIMOS AGENDAMENTOS
+
+Criar tabela/lista:
+
+Cliente | Serviço | Profissional | Horário | Status
+
+Exemplos:
+
+João Silva | Corte | Carlos | 14:30 | Confirmado
+
+Pedro Santos | Barba | Lucas | 15:00 | Confirmado
+
+Marcos Oliveira | Corte + Barba | Carlos | 16:30 | Pendente
+
+Utilizar badges para os status.
+
+---
+
+# 21. AGENDA
+
+Criar página completa de agenda.
+
+Permitir visualização:
+
+* Dia
+* Semana
+* Lista
+
+Criar calendário visual.
+
+Botão:
+
+**+ Novo agendamento**
+
+Ao clicar, abrir modal.
+
+Campos:
+
+* Cliente
+* Serviço
+* Profissional
+* Data
+* Horário
+* Observação
+
+Status:
+
+* Pendente
+* Confirmado
+* Concluído
+* Cancelado
+
+Nesta etapa, utilizar dados mockados.
+
+---
+
+# 22. CLIENTES
+
+Criar página de gerenciamento de clientes.
+
+Topo:
+
+**Clientes**
+
+"Gerencie os clientes do seu negócio."
+
+Botão:
+
+**+ Novo cliente**
+
+Criar:
+
+* Busca
+* Filtros
+* Tabela
+
+Colunas:
+
+* Cliente
+* Telefone
+* Último atendimento
+* Total de agendamentos
+* Status
+* Ações
+
+Criar modal para adicionar cliente.
+
+---
+
+# 23. PERFIL DO CLIENTE
+
+Criar página ou modal detalhado.
+
+Mostrar:
+
+* Nome
+* Foto/avatar
+* Telefone
+* E-mail
+* Observações
+
+E abaixo:
+
+**Histórico de agendamentos**
+
+Tabela com:
+
+* Data
+* Serviço
+* Profissional
+* Valor
+* Status
+
+---
+
+# 24. SERVIÇOS
+
+Criar gerenciamento de serviços.
+
+Exemplos:
+
+Corte masculino — R$ 35 — 30 min
+
+Barba — R$ 25 — 20 min
+
+Corte + Barba — R$ 55 — 50 min
+
+Criar cards ou tabela.
+
+Cada serviço deve ter:
+
+* Nome
+* Descrição
+* Preço
+* Duração
+* Status
+
+Botão:
+
+**+ Novo serviço**
+
+---
+
+# 25. PROFISSIONAIS
+
+Criar página para gerenciamento de profissionais.
+
+Cards contendo:
+
+* Foto
+* Nome
+* Especialidade
+* Serviços
+* Status
+
+Exemplo:
+
+Carlos Almeida
+
+Barbeiro
+
+8 serviços
+
+Ativo
+
+Botão:
+
+**Adicionar profissional**
+
+---
+
+# 26. RELATÓRIOS
+
+Criar dashboard de relatórios.
+
+Cards:
+
+* Faturamento
+* Agendamentos
+* Novos clientes
+* Ticket médio
+
+Gráficos:
+
+* Agendamentos por período
+* Serviços mais realizados
+* Faturamento mensal
+* Clientes novos
+
+Adicionar filtros:
+
+* Hoje
+* 7 dias
+* 30 dias
+* 3 meses
+* Personalizado
+
+---
+
+# 27. CONFIGURAÇÕES
+
+Criar página com abas:
+
+### Empresa
+
+* Nome
+* Logo
+* Telefone
+* WhatsApp
+* Endereço
+
+### Aparência
+
+Permitir configurar:
+
+* Logo
+* Cor principal
+* Cor secundária
+* Tema
+
+### Horários
+
+Configuração dos dias e horários de funcionamento.
+
+### Conta
+
+* Nome
+* E-mail
+* Senha
+
+### Notificações
+
+Opções visuais para:
+
+* E-mail
+* WhatsApp
+* Lembretes
+
+---
+
+# 28. PÁGINA PÚBLICA DA EMPRESA
+
+Criar uma demonstração de como ficará o site público de uma empresa.
+
+Utilizar:
+
+**Barbearia Imperial**
+
+Hero:
+
+\"Seu estilo começa aqui.\"
+
+Mostrar:
+
+* Logo
+* Foto principal
+* Serviços
+* Profissionais
+* Horários
+* Localização
+* Avaliações
+* Botão \"Agendar horário\"
+
+Criar fluxo visual de agendamento.
+
+---
+
+# 29. MODAL DE AGENDAMENTO
+
+Criar experiência simples:
+
+### Escolha o serviço
+
+Corte
+Barba
+Corte + Barba
+
+↓
+
+### Escolha o profissional
+
+Carlos
+Lucas
+
+↓
+
+### Escolha a data
+
+Calendário
+
+↓
+
+### Escolha o horário
+
+14:00
+14:30
+15:00
+15:30
+
+↓
+
+### Seus dados
+
+Nome
+Telefone
+
+↓
+
+### Confirmar
+
+Mostrar uma tela final:
+
+**Agendamento confirmado!**
+
+---
+
+# 30. RESPONSIVIDADE
+
+A aplicação deve ser excelente em:
+
+* Desktop
+* Notebook
+* Tablet
+* Celular
+
+No celular:
+
+* Sidebar vira menu retrátil.
+* Tabelas devem possuir comportamento responsivo.
+* Cards devem se reorganizar.
+* Botões devem continuar fáceis de tocar.
+* Agenda deve funcionar perfeitamente.
+* Modais devem ocupar espaço adequado.
+
+Não simplesmente diminua os elementos.
+
+Adapte o layout para cada tamanho de tela.
+
+---
+
+# 31. UX/UI
+
+Priorizar:
+
+* Hierarquia visual clara.
+* Espaçamento consistente.
+* Tipografia moderna.
+* Bordas arredondadas moderadamente.
+* Sombras suaves.
+* Ícones consistentes.
+* Estados de hover.
+* Estados de loading.
+* Estados vazios.
+* Mensagens de sucesso.
+* Mensagens de erro.
+* Confirmações antes de ações destrutivas.
+
+Criar microinterações sutis.
+
+Evitar animações exageradas.
+
+---
+
+# 32. DARK MODE
+
+Adicionar suporte a:
+
+* Light Mode
+* Dark Mode
+
+Criar botão para alternar o tema.
+
+O dark mode deve ser cuidadosamente desenvolvido e não apenas inverter as cores.
+
+---
+
+# 33. DADOS MOCKADOS
+
+Utilizar dados fictícios realistas.
+
+Empresa:
+
+**Barbearia Imperial**
+
+Clientes:
+
+* João Silva
+* Pedro Santos
+* Marcos Oliveira
+* Lucas Ferreira
+* Rafael Costa
+
+Profissionais:
+
+* Carlos Almeida
+* Lucas Martins
+
+Serviços:
+
+* Corte
+* Barba
+* Corte + Barba
+* Sobrancelha
+
+Os dados devem ser centralizados em arquivos próprios para facilitar a substituição futura por dados do Supabase.
+
+---
+
+# 34. ARQUITETURA PREPARADA PARA MULTI-TENANT
+
+Mesmo utilizando dados mockados, organize o código pensando no futuro.
+
+Conceito:
+
+company_id
+
+Cada registro futuro deverá estar associado a uma empresa.
+
+Estrutura conceitual:
+
+companies
+
+users
+
+customers
+
+professionals
+
+services
+
+appointments
+
+subscriptions
+
+settings
+
+Não implementar o banco agora.
+
+Apenas preparar a estrutura da aplicação para isso.
+
+---
+
+# 35. COMPONENTES REUTILIZÁVEIS
+
+Criar componentes reutilizáveis:
+
+* Button
+* Card
+* Modal
+* Input
+* Select
+* Badge
+* Avatar
+* Table
+* Dropdown
+* Sidebar
+* Header
+* Calendar
+* EmptyState
+* LoadingState
+* Toast
+
+Evitar duplicação de código.
+
+---
+
+# 36. ESTADOS VAZIOS
+
+Criar estados para quando não houver dados.
+
+Exemplo:
+
+\"Você ainda não possui clientes.\"
+
+Botão:
+
+**Adicionar primeiro cliente**
+
+Fazer isso para:
+
+* Clientes
+* Serviços
+* Profissionais
+* Agendamentos
+* Relatórios
+
+---
+
+# 37. EXPERIÊNCIA DE PRIMEIRO ACESSO
+
+Se o usuário ainda não tiver configurado a empresa:
+
+mostrar:
+
+**Vamos configurar seu negócio?**
+
+Checklist:
+
+✓ Criar empresa
+
+✓ Adicionar primeiro serviço
+
+○ Adicionar profissional
+
+○ Configurar horários
+
+○ Publicar página
+
+Mostrar progresso:
+
+**40% concluído**
+
+---
+
+# 38. REGRAS IMPORTANTES
+
+NÃO criar funcionalidades fictícias que não foram solicitadas.
+
+NÃO adicionar blockchain.
+
+NÃO adicionar criptomoedas.
+
+NÃO adicionar funcionalidades desnecessárias.
+
+NÃO criar um sistema financeiro completo nesta etapa.
+
+NÃO implementar pagamentos nesta primeira versão.
+
+NÃO implementar IA ainda.
+
+NÃO conectar APIs externas sem necessidade.
+
+O objetivo é criar uma **base sólida de interface para o SaaS**.
+
+---
+
+# 39. QUALIDADE DO CÓDIGO
+
+O código deve ser:
+
+* Limpo
+* Organizado
+* Tipado
+* Componentizado
+* Fácil de manter
+* Fácil de expandir
+* Responsivo
+* Sem código duplicado desnecessário
+
+Utilizar nomes claros para componentes e funções.
+
+---
+
+# 40. RESULTADO ESPERADO
+
+Ao finalizar, quero uma aplicação que pareça um SaaS comercial real.
+
+Deve ser possível navegar visualmente por:
+
+Landing Page
+
+↓
+
+Login
+
+↓
+
+Cadastro
+
+↓
+
+Onboarding
+
+↓
+
+Dashboard
+
+↓
+
+Agenda
+
+↓
+
+Clientes
+
+↓
+
+Serviços
+
+↓
+
+Profissionais
+
+↓
+
+Relatórios
+
+↓
+
+Configurações
+
+↓
+
+Página pública da empresa
+
+Todas as telas devem estar conectadas através da navegação.
+
+Utilize dados mockados para tornar a experiência demonstrável.
+
+O projeto deve estar preparado para, em uma segunda etapa, conectar o Supabase e transformar os dados mockados em dados reais.
+
+**Prioridade máxima: qualidade visual + UX + organização do código + responsividade + arquitetura preparada para evolução.**
+
+Não tente construir o produto inteiro agora.
+
+Construa uma V1 visual extremamente bem acabada.
+*/
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { 
